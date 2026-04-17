@@ -9,8 +9,8 @@ y = np.sin(x)
 
 # the whole graph code
 fig, ax = plt.subplots(figsize=(7, 4))
-ax.plot(x, y, color='purple', label='Sine Wave')
-ax.set_title("Success: NumPy & Matplotlib Linked")
+ax.plot(x, y, color='green', label='Graph yes')
+ax.set_title("Nice")
 ax.grid(True)
 
 # display it to the html
