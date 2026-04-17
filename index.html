@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ictdrill</title>
+    <title>Campus_ICT10Q4Drill2_LName_FName</title>
 
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
@@ -13,10 +13,33 @@
 </head>
 <body>
 
-    <h1> Drill2</h1>
-    <div id="graph-output"></div>
+    <h2>Campus ICT Drill: Data Visualization</h2>
+    <p><i>If the graph doesn't appear immediately, please wait 15 seconds for NumPy/Matplotlib to load.</i></p>
+    
+    <hr>
 
-    <script type="py" src="main.py"></script>
+    <div id="graph-area"></div>
+
+    <script type="py">
+        import numpy as np
+        import matplotlib.pyplot as plt
+        from pyscript import display
+
+        # varuables
+        x = np.linspace(0, 10, 100)
+        y = np.sin(x)
+
+        # the graph code
+        fig, ax = plt.subplots(figsize=(8, 4))
+        ax.plot(x, y, color='dodgerblue', linewidth=2, label='Sine Wave')
+        ax.set_title("NumPy & Matplotlib Functional Test")
+        ax.set_xlabel("X-Axis")
+        ax.set_ylabel("Y-Axis")
+        ax.grid(True, linestyle='--')
+        ax.legend()
+        
+        display(fig, target="graph-area")
+    </script>
 
 </body>
 </html>
