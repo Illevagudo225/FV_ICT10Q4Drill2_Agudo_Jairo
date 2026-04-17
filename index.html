@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Campus_ICT10Q4Drill2_LName_FName</title>
@@ -13,9 +13,7 @@
 </head>
 <body>
 
-    <h2>Campus ICT Drill: Data Visualization</h2>
-    <p><i>If the graph doesn't appear immediately, please wait 15 seconds for NumPy/Matplotlib to load.</i></p>
-    
+    <h2>Pythonn Drill</h2>
     <hr>
 
     <div id="graph-area"></div>
@@ -25,19 +23,21 @@
         import matplotlib.pyplot as plt
         from pyscript import display
 
-        # varuables
+        # vriables
         x = np.linspace(0, 10, 100)
         y = np.sin(x)
 
-        # the graph code
+        # use ai for this, it doesnt work at all if main.py (seperate files
         fig, ax = plt.subplots(figsize=(8, 4))
-        ax.plot(x, y, color='dodgerblue', linewidth=2, label='Sine Wave')
-        ax.set_title("NumPy & Matplotlib Functional Test")
+        ax.plot(x, y, color='blue', linewidth=1.5)
+        
+        # graph itself
+        ax.set_title("Supr graph")
         ax.set_xlabel("X-Axis")
         ax.set_ylabel("Y-Axis")
-        ax.grid(True, linestyle='--')
-        ax.legend()
-        
+        ax.grid(True)
+
+        # output here
         display(fig, target="graph-area")
     </script>
 
